@@ -1,0 +1,6 @@
+<h1>Enter a new category</h1>
+
+<%= form_for :category, url: categories_path do |f| %>
+  <div>Name: <%= f.text_field :name %></div>
+  <%= f.submit "Add category" %>
+<% end %>

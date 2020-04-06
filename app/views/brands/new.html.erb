@@ -1,0 +1,6 @@
+<h1>Enter a new brand</h1>
+
+<%= form_for :brand, url: brands_path do |f| %>
+  <div>Name: <%= f.text_field :name %></div>
+  <%= f.submit "Add brand" %>
+<% end %>
