@@ -21,7 +21,7 @@ UserProducts
   <!-- rails generate resource UserProducts user_id:integer product_id:integer opened_at:date expiration_date:date comments:text bought_at:string website:string prince:decimal --no-test-framework -->
 
 Products
-  - belongs to a category 
+  - belongs to a category
   - has many users through UserProducts
 
   name
@@ -44,3 +44,8 @@ As a user:
 - I can add products to my collection.
 - I can remove products from my collection.
 - I can edit the information of products in my collection.
+
+To do:
+Show error messages in sign up page if any.
+Keep me log in, don't show log in page if logged in.
+Change show to profile in browser.
