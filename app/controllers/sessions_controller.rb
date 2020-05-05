@@ -1,4 +1,8 @@
 class SessionsController < ApplicationController
+  before_action :redirect_if_logged_in, only: [:home, :new]
+
+  def home
+  end
 
   def new
   end
