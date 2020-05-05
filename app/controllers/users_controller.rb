@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
-
+  before_action :redirect_if_logged_in, only: :new
 
   def new
+    @user = User.new
   end
 
   def create
@@ -10,16 +11,21 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
-      redirect_to signup_path
+      render :new
     end
   end
 
   def show
-    if logged_in?
-      @user = User.find(params[:id])
+    if logged_in? #IF I AM LOGGED IN
+      if current_user_is_params_user?
+        ## IF THE CURRENT USER ID (LOGGED IN PERSON) IS DIFFERENT FROM PARAMS, TAKE ME TO MY SHOW PAGE
+        redirect_to user_path current_user
+      else
+        @user = User.find(params[:id])
+      end
     else
       redirect_to login_path
-    end 
+    end
   end
 
   private
