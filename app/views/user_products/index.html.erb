@@ -1,0 +1,13 @@
+<h1><%= @user.name %>'s <%= @category.name %> collection.</h1>
+<p><%= link_to "Add products to this category", new_product_path %></p>
+<% @user_products.each do |user_product| %>
+<%= user_product.product.name %></br>
+<% end %>
+
+<% if @user_products.count > 0 %>
+  <p>You have <%= @user_products.count %> blushes in your collection!</p>
+<% else %>
+  <p>You don't have any products in your collection. You poor.</p>
+<% end %>
+
+<%= link_to "Back", user_path(@user)%>
