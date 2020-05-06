@@ -1,0 +1,8 @@
+<h1>Enter a new Product</h1>
+
+<%= form_for :product, url: products_path do |f| %>
+  <div>Name: <%= f.text_field :name %></div>
+  <div>Category:<%= f.collection_select :category_id, @categories, :id, :name %></div>
+
+  <%= f.submit "Add product" %>
+<% end %>
