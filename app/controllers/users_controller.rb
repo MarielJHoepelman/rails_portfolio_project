@@ -16,13 +16,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    if logged_in? #IF I AM LOGGED IN
-      if current_user_is_params_user?
-        ## IF THE CURRENT USER ID (LOGGED IN PERSON) IS DIFFERENT FROM PARAMS, TAKE ME TO MY SHOW PAGE
-        redirect_to user_path current_user
-      else
-        @user = User.find(params[:id])
-      end
+    if logged_in?
+      @categories = Category.all 
+      @user = User.find(params[:id])
     else
       redirect_to login_path
     end
