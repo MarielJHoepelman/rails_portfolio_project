@@ -20,10 +20,12 @@
 
  .header {
    text-align: center;
+   margin-top: 250px;
  }
 
  .homepage_links {
- text-align: center;
+   text-align: center;
+   margin-top: 20px;
  }
 
  body {
