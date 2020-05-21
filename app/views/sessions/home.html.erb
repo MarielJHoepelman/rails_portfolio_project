@@ -1,5 +1,8 @@
-<h1> Welcome </h1>
-
-<%= link_to "Sign Up Here", signup_path %> |
-<%= link_to "Log In Here", login_path %> |
-<%= link_to "Log  in with Google", login_path %>
+<div class="header">
+  <h1> Welcome to Makeupnizer </h1>
+</div>
+<div class="homepage_links">
+  <%= link_to "Sign Up Here", signup_path, class: "btn btn-dark" %>
+  <%= link_to "Log In Here", login_path, class: "btn btn-dark"%>
+  <%= link_to "Log  in with Google", login_path, class: "btn btn-dark" %>
+</div>
