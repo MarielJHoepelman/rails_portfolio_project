@@ -14,6 +14,35 @@
  *= require_self
  */
 
- .field_with_errors input{
+ .field_with_errors input {
    border: 1px solid red;
  }
+
+ .header {
+   text-align: center;
+ }
+
+ .homepage_links {
+ text-align: center;
+ }
+
+ body {
+   background-color: #f8f9fa;
+ }
+
+ .footer-copyright {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background: #FFFFFF;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.login_wrapper .container {
+  margin-top: 150px;
+  width: 480px;
+
+}
