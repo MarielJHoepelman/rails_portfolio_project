@@ -48,3 +48,17 @@ ul {
   width: 480px;
 
 }
+
+.logo_image {
+  display: block;
+  width: 350px;
+  height: auto;
+}
+
+.navbar.navbar-light.bg-light {
+  margin: 10px 0;
+}
+
+.container {
+  margin_top: 10px;
+}
