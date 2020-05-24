@@ -11,7 +11,18 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <%= image_tag("logo_no_glitter_no_shadow.png", class: 'logo_image') %>
+      </div>
+      <% if logged_in? %>
+        <%= link_to "Logout", logout_path, method: "delete", type: "buttton", class: "btn btn-dark" %>
+      <% end %>
+    </nav>
+
+    <div class="container">
+      <%= yield %>
+    </div>
 
     <div class="footer-copyright text-center py-3">© 2020 Copyright: created by Mariel Hoepelman
      <a href="https://marielhoepelman.com"> marielhoepelman.com</a>
