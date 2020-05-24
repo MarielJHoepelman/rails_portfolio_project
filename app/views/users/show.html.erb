@@ -1,7 +1,6 @@
 <h1> Hello <%= @user.name %> </h1>
-<% @categories.each do |category| %>
-<%= link_to category.name, user_category_user_products_path(@user, category) %>
-<% end %>
-
-
-<%= link_to "Logout", logout_path, method: "delete" %>
+<div class="d-flex justify-content-center flex-wrap">
+  <% @categories.each do |category| %>
+  <div><%= link_to category.name, user_category_user_products_path(@user, category), class: "btn btn-light" %></div>
+  <% end %>
+</div>
