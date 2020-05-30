@@ -3,8 +3,7 @@ class UserProductsController < ApplicationController
   def index
     @category = Category.find(params[:category_id])
     @user = User.find(params[:user_id])
-    @user_products = UserProduct.joins(:product)
-      .where("user_products.user_id=? and products.category_id=?", params[:user_id], params[:category_id])
+    @user_products = UserProduct.product_from_category(params[:user_id], params[:category_id])
   end
 
   def new
