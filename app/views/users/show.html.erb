@@ -1,6 +1,7 @@
 <h1> Hello <%= @user.name %> </h1>
+<h4> Click on a category to see your collection.</h4>
 <div class="d-flex justify-content-center flex-wrap">
   <% @categories.each do |category| %>
-  <div><%= link_to category.name, user_category_user_products_path(@user, category), class: "btn btn-light" %></div>
+  <div class="categories_buttons"><%= link_to category.name, user_category_user_products_path(@user, category), class: "btn btn-light" %></div>
   <% end %>
 </div>
