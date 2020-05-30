@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
 
     def new
       @categories = Category.all
+      @category = Category.find(params[:id])
     end
 
     def create
