@@ -1,8 +1,12 @@
 <h1><%= @product.name %><h1>
 <h2><%= @product.category.name %></h2>
+
+<div class="form-group">
 <%= form_for @user_product do |f| %>
   <%= f.text_field :product_id %>
   <%= f.text_field :user_id %>
   Price: <%= f.text_field :price %>
   <%= f.submit "Add to my collection" %>
 <% end %>
+
+</div>
