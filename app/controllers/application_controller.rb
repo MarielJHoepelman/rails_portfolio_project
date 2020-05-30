@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
 
 
   helper_method :logged_in?
-  
+
   def logged_in?
     !!session[:user_id]
   end
@@ -20,5 +20,4 @@ class ApplicationController < ActionController::Base
   def current_user_is_params_user?
     current_user.id != params[:id].to_i
   end
-
 end

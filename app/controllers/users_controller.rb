@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
   def show
     if logged_in?
-      @categories = Category.all 
+      @categories = Category.all
       @user = User.find(params[:id])
     else
       redirect_to login_path
