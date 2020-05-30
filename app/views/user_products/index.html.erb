@@ -1,13 +1,18 @@
 <h1><%= @user.name %>'s <%= @category.name %> collection.</h1>
-<p><%= link_to "Add products to this category", new_product_path %></p>
-<% @user_products.each do |user_product| %>
-<%= user_product.product.name %></br>
-<% end %>
 
 <% if @user_products.count > 0 %>
   <p>You have <%= @user_products.count %> blushes in your collection!</p>
+  <p>The total value of your collection is <%= @user_products.reduce(0) {|sum, user_product| sum + user_product.price } %></p>
 <% else %>
-  <p>You don't have any products in your collection. You poor.</p>
+  <p>You don't have any products in your collection.</p>
 <% end %>
 
+<ul>
+  <% @user_products.each do |user_product| %>
+  <li><%= user_product.product.name %></li>
+  <% end %>
+</ul>
+
+
+<p><%= link_to "Add products to this category", new_category_product_path(@category) %></p>
 <%= link_to "Back", user_path(@user)%>
