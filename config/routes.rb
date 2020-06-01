@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
 
   resources :products do
-    resources :user_products
+    resources :user_products, only: [:new, :index]
   end
+
+  resources :user_products, only: [:create]
 
   resources :categories do
     resources :products
   end
-
-  resources :user_products
 
   resources :users do
     resources :categories do
