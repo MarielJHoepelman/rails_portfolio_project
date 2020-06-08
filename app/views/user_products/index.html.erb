@@ -1,20 +1,25 @@
-<h2><%= @user.name %>'s <%= @category.name %> collection.</h2>
+<div class="header_wrapper">
+  <h3><%= @user.name %>'s <%= @category.name %> collection.</h3>
+</div>
 
-<% if @user_products.count == 0 %>
-  <p>You don't have any products in your collection.</p>
-  <% elsif @user_products.count == 1 %>
-  <p>You have <%= @user_products.count %> product in your collection!</p>
-  <% else %>
-  <p>You have <%= @user_products.count %> products in your collection!</p>
-<% end %>
-<p>The total value of your collection is <%= @user_products.reduce(0) {|sum, user_product| sum + user_product.price } %></p>
-
-<ul>
-  <% @user_products.each do |user_product| %>
-  <li><%= user_product.product.name %> <%= link_to "Delete", user_product_path(user_product), method: :delete, class: "btn btn-outline-danger btn-sm" %>
-  </li>
+  <% if @user_products.count == 0 %>
+    <h5>You don't have any products in your collection.</h5>
+    <% elsif @user_products.count == 1 %>
+    <h5>You have <%= @user_products.count %> product in your collection!</h5>
+    <% else %>
+    <h5>You have <%= @user_products.count %> products in your collection!</h5>
   <% end %>
-</ul>
+
+<div class="user_products_wrapper">
+  <ul>
+    <% @user_products.each do |user_product| %>
+    <li><%= user_product.product.name %> <%= link_to "Delete", user_product_path(user_product), method: :delete, class: "btn btn-outline-danger btn-sm" %>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+<p>The total value of your collection is <%= @user_products.reduce(0) {|sum, user_product| sum + user_product.price } %></p>
 
 
 <p><%= link_to "Add products to this category",  category_products_path(@category) %></p>
