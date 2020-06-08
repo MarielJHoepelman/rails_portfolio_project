@@ -1,3 +1,9 @@
-<%= @product.name %><br/>
-<%= @product.category.name %>
-<%= link_to "Add to my collection", new_product_user_product_path(@product) %>
+<div class="product_show_wrapper">
+  <h3><%= @product.name %></h3>
+  
+  <div class="category_name">
+    <h5><%= @product.category.name %></h5>
+  </div>
+
+  <%= link_to "Add to my collection", new_product_user_product_path(@product), class:"btn btn-light btn-sm" %>
+</div>
