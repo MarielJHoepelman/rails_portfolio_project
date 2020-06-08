@@ -1,3 +1,5 @@
 <% @products.each do |p| %>
-<%= link_to p.name, product_path(p) %>  <%= link_to "Add", new_product_user_product_path(p), type:"button", class:"btn btn-outline-light btn-sm"%></br>
+  <%= link_to p.name, product_path(p) %>  <%= link_to "Add", new_product_user_product_path(p), type:"button", class:"btn btn-outline-light btn-sm"%></br>
 <% end %>
+
+<%= link_to "Add a new product if it doesn't exist", new_category_product_path(@category) %>
