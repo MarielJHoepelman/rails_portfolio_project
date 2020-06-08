@@ -1,5 +1,8 @@
-<h1> Hello <%= @user.name %> </h1>
-<h4> Click on a category to see your collection.</h4>
+<div class="header_wrapper">
+  <h3> Hello <%= @user.name %> </h3>
+  <h5> Click on a category to see your collection</h5>
+</div>
+
 <div class="d-flex justify-content-center flex-wrap">
   <% @categories.each do |category| %>
   <div class="categories_buttons"><%= link_to category.name, user_category_user_products_path(@user, category), class: "btn btn-light" %></div>
