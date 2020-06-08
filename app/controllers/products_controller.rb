@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
   def new
-    @categories = Category.all
-    @category = Category.find(params[:id])
+    @product = Product.new(category_id: params[:category_id])
   end
 
   def create
@@ -10,6 +9,7 @@ class ProductsController < ApplicationController
   end
 
   def index
+    @category = Category.find(params[:category_id])
     @products = Product.where(category_id: params[:category_id])
   end
 
