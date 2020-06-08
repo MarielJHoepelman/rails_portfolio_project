@@ -81,3 +81,19 @@ h1 {
   /* font-family: 'Indie Flower', cursive; */
   /* font-family: 'Homemade Apple', cursive; */
 }
+
+.product_show_wrapper {
+  margin-top: 20px;
+}
+
+.product_show_wrapper .category_name {
+  margin-bottom: 20px;
+}
+
+.header_wrapper {
+  margin-top: 15px;
+}
+
+.user_products_wrapper {
+  margin-top: 20px;
+}
