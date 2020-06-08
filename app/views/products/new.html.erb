@@ -1,8 +1,15 @@
-<h1>Enter a new Product</h1>
+<div class="new_product_wrapper">
+  <h2>Enter a new Product for <%= @product.category.name %></h2>
 
-<%= form_for :product, url: products_path do |f| %>
-  <div>Name: <%= f.text_field :name %></div>
-  <div>Category:<%= f.collection_select :category_id, @categories, :id, :name %></div>
+    <%= form_for @product, url: products_path do |f| %>
+      <%= f.hidden_field :category_id %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
 
-  <%= f.submit "Add product" %>
-<% end %>
+  <div class="form-group">
+    <%= f.submit "Add product", class: "btn btn-light btn_sm" %>
+  </div>
+  <% end %>
+</div>
