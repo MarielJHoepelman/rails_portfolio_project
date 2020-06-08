@@ -15,8 +15,11 @@
   <body class="application-body">
     <nav class="navbar navbar-light bg-light">
       <div class="container">
-        <%= image_tag("logo_no_glitter_no_shadow.png", class: 'logo_image') %>
-        
+        <%= link_to root_path do %>
+          <%= image_tag("logo_no_glitter_no_shadow.png", class: 'logo_image') %>
+        <% end %>
+
+
         <% if logged_in? %>
           <%= link_to "Logout", logout_path, method: "delete", type: "buttton", class: "btn btn-dark" %>
         <% end %>
