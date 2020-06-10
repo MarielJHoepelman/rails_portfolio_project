@@ -3,12 +3,13 @@
     <h1>Log In</h1>
 
     <%= form_for :session, url: '/login' do |f| %>
-      <div class="form-group">
-        <%= f.label :email %><br/>
+
+      <div class="form-group <%= !!flash.now[:notice] ? "custom_error" : "" %> ">
+        <%= f.label :email %>
         <%= f.email_field :email, class: "form-control", placeholder: "Enter your email here" %>
       </div>
-      <div class="form-group">
-        <%= f.label :password %><br/>
+      <div class="form-group <%= !!flash.now[:notice] ? "custom_error" : "" %> ">
+        <%= f.label :password %>
         <%= f.password_field :password, class: "form-control", placeholder: "Enter your password here" %>
       </div>
       <div class="form-group">
