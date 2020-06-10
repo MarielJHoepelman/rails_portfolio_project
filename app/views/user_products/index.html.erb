@@ -11,12 +11,15 @@
   <% end %>
 
 <div class="user_products_wrapper">
-  <ul>
+  <table class="table table-hover">
     <% @user_products.each do |user_product| %>
-    <li><%= user_product.product.name %> <%= link_to "Delete", user_product_path(user_product), method: :delete, class: "btn btn-outline-danger btn-sm" %>
-    </li>
+    <tr>
+      <td><%= user_product.product.name %></td>
+      <td>$<%= user_product.price %></td>
+      <td><%= link_to "Delete", user_product_path(user_product), method: :delete, class: "btn btn-outline-danger btn-sm" %>
+    </tr>
     <% end %>
-  </ul>
+  </table>
 </div>
 
 <p>The total value of your collection is <%= @user_products.reduce(0) {|sum, user_product| sum + user_product.price } %></p>
