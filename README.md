@@ -47,5 +47,5 @@ Everyone interacting in the [Makeupnizer](https://github.com/MarielJHoepelman/ra
 
 ## Credits
 
-The logo for this project was created by [Mariangel Fermin](https://www.instagram.com/noiir_rrr/).
+The logo for this project was created by [Mariangel Fermin](https://www.instagram.com/noiir_rrr/).\
 The letter used for the creation of the logo is [Victoria](https://www.dafont.com/victoria-4.font).
