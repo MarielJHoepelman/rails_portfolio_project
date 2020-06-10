@@ -11,6 +11,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
+      flash.now[:notice] = "Please fill all fields"
       render :new
     end
   end
