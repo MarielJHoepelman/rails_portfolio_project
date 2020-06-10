@@ -1,5 +1,11 @@
-<% @products.each do |p| %>
-  <%= link_to p.name, product_path(p) %>  <%= link_to "Add", new_product_user_product_path(p), type:"button", class:"btn btn-outline-light btn-sm"%></br>
-<% end %>
+<div class="user_products_wrapper">
+  <ul>
+    <% @products.each do |p| %>
+    <li><%= link_to p.name, product_path(p) %>  <%= link_to "Add", new_product_user_product_path(p), type:"button", class:"btn btn-light btn-sm"%></li>
+    <% end %>
+  </ul>
+</div>
 
-<%= link_to "Add a new product if it doesn't exist", new_category_product_path(@category) %>
+<div class="button_class">
+  <%= link_to "Add a new product if it doesn't exist", new_category_product_path(@category), type:"button", class:"btn btn-dark"%>
+</div>
