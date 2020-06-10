@@ -2,7 +2,8 @@
 
 ## Description
 
-[Makeupnizer](https://github.com/MarielJHoepelman/rails_portfolio_project) is a makeup collection tracker app. With [Makeupnizer](https://github.com/MarielJHoepelman/rails_portfolio_project) users can track their makeup by category.
+[Makeupnizer](https://github.com/MarielJHoepelman/rails_portfolio_project) is a makeup collection tracker app. With [Makeupnizer](https://github.com/MarielJHoepelman/rails_portfolio_project) users can track their makeup collection by category.
+[Makeupnizer](https://github.com/MarielJHoepelman/rails_portfolio_project) is a MVP academic project requirement for the [Flatiron School](https://flatironschool.com/) Full Stack Web Development V8 curriculum.
 
 ## Usage
 
@@ -42,3 +43,9 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the [Makeupnizer](https://github.com/MarielJHoepelman/rails_portfolio_project) project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/MarielJHoepelman/rails_portfolio_project/blob/master/CODE_OF_CONDUCT.md).
+
+
+## Credits
+
+The logo for this project was created by [Mariangel Fermin](https://www.instagram.com/noiir_rrr/).
+The letter used for the creation of the logo is [Victoria](https://www.dafont.com/victoria-4.font).
