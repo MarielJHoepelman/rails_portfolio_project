@@ -14,9 +14,14 @@
  *= require_self
  */
 
- .field_with_errors input {
+ .field_with_errors input, .custom_error.form-group input {
    border: 1px solid red;
  }
+
+ .alert {
+  background-color: #d96459;
+  text-align: center;
+}
 
  .header {
    text-align: center;
@@ -96,4 +101,8 @@ h1 {
 
 .user_products_wrapper {
   margin-top: 20px;
+}
+
+.button_class {
+  margin_top: 20px;
 }
