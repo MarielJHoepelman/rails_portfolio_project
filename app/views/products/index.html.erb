@@ -9,3 +9,4 @@
 <div class="button_class">
   <%= link_to "Add a new product if it doesn't exist", new_category_product_path(@category), type:"button", class:"btn btn-dark"%>
 </div>
+<%= link_to "Back", user_category_user_products_path(current_user, @category), type:"button", class:"btn btn-light" %>
