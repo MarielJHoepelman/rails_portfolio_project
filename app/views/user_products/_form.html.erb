@@ -1,0 +1,10 @@
+
+<%= form_for([@product, @user_product]) do |f| %>
+  <div class="form-group <%= !!flash.now[:notice] ? "custom_error" : "" %> ">
+    <%= f.hidden_field :product_id %>
+    <%= f.hidden_field :user_id %>
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+    <%= f.submit "Update my collection" %>
+  </div>
+<% end %>
