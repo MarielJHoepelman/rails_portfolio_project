@@ -1,9 +1,15 @@
+
 <div class="user_products_wrapper">
-  <ul>
+  <h3><%= "Select from the list to add to your collection."  %></h3>
+
+  <table class="table table-hover">
     <% @products.each do |p| %>
-    <li><%= link_to p.name, product_path(p) %>  <%= link_to "Add", new_product_user_product_path(p), type:"button", class:"btn btn-light btn-sm"%></li>
-    <% end %>
-  </ul>
+    <tr>
+      <td><%=p.name%></td>
+      <td><%= link_to "Add", new_product_user_product_path(p), type:"button", class:"btn btn-light btn-sm"%></td>
+      <% end %>
+    </tr>
+  </table>
 </div>
 
 <div class="button_class">
