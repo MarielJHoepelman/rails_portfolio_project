@@ -1,0 +1,9 @@
+<div class="category_product_wrapper">
+  <h3>Edit <%= @user_product.product.name %></h3>
+
+  <%= render 'user_products/form' %>
+</div>
+
+<div class="back_button">
+  <%= link_to "Back", user_path(current_user), class: "btn btn-light" %>
+</div>
