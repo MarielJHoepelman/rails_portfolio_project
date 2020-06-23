@@ -14,7 +14,7 @@
  *= require_self
  */
 
- .field_with_errors input, .custom_error.form-group input {
+ .field_with_errors input, .custom_error.form-group input[type="text"] {
    border: 1px solid red;
  }
 
@@ -109,4 +109,12 @@ h1 {
 
 .back_button {
     margin_top: 20px;
+}
+
+.table .table-hover {
+  margin-bottom: 10px;
+}
+
+.category_product_wrapper {
+  margin-top: 10px;
 }
