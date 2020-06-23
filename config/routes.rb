@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
   resources :products do
-    resources :user_products, only: [:new, :index, :edit]
+    resources :user_products, only: [:new, :index, :edit, :create]
   end
 
-  resources :user_products, only: [:create, :destroy]
+  resources :user_products, only: [:create, :destroy, :update ]
 
   resources :categories do
     resources :products
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :categories do
-      resources :user_products, only: :index
+      resources :user_products, only: [:index, :edit]
     end
   end
 
