@@ -1,12 +1,8 @@
-<h1><%= @product.name %><h1>
-<h2><%= @product.category.name %></h2>
+<div class="category_product_wrapper">
+  <h3><%= @product.name %></h3>
+  <h5><%= @product.category.name %></h5>
 
-<div class="form-group">
-<%= form_for @user_product do |f| %>
-  <%= f.hidden_field :product_id %>
-  <%= f.hidden_field :user_id %>
-  Price: <%= f.text_field :price %>
-  <%= f.submit "Add to my collection" %>
-<% end %>
-
+  <%= render 'user_products/form' %>
 </div>
+
+  <%= link_to "Back", category_products_path(@product.category.id), type:"button", class:"btn btn-light" %>
