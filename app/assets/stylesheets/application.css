@@ -13,6 +13,14 @@
  *= require_tree .
  *= require_self
  */
+ html, body {
+   height: 100%;
+ }
+
+ body {
+   display: flex;
+   flex-direction: column;
+ }
 
  .field_with_errors input, .custom_error.form-group input[type="text"] {
    border: 1px solid red;
@@ -38,10 +46,10 @@
  }
 
  .footer-copyright {
-  position: fixed;
   bottom: 0px;
   width: 100%;
   background: #FFFFFF;
+  flex-shrink: 0;
 }
 
 ul {
@@ -70,12 +78,16 @@ ul {
 }
 
 .container {
-  margin_top: 10px;
+  margin: 20px 0;
+  flex: 1 0 auto;
 }
 
 .categories_buttons {
   margin-left: 20px;
   margin-right: 20px;
+}
+.categories_buttons .btn {
+  margin-bottom: 10px;
 }
 
 .d-flex.justify-content-center.flex-wrap {
@@ -104,11 +116,11 @@ h1 {
 }
 
 .button_class {
-  margin_top: 20px;
+  margin-top: 20px;
 }
 
 .back_button {
-    margin_top: 20px;
+  margin-top: 20px;
 }
 
 .table .table-hover {
