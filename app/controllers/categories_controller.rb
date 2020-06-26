@@ -5,7 +5,12 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.create(category_params)
-    redirect_to categories_path
+    if @category.valid?
+      redirect_to user_path(current_user)
+    else
+      flash[:notice] = "Please enter a valid category."
+      redirect_to new_category_path
+    end
   end
 
   def index
