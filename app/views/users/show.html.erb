@@ -8,3 +8,7 @@
   <div class="categories_buttons"><%= link_to category.name, user_category_user_products_path(@user, category), class: "btn btn-light" %></div>
   <% end %>
 </div>
+
+<div class="button_class">
+  <%= link_to "Add a new category",  new_category_path, type:"button", class:"btn btn-dark" %>
+</div>
