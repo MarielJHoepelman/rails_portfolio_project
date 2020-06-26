@@ -5,7 +5,12 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.create(product_params)
-    redirect_to new_product_user_product_path(@product)
+    if @product.valid?
+      redirect_to new_product_user_product_path(@product)
+    else
+      flash[:notice] = "Please enter a product name."
+      redirect_to new_category_product_path(category_id: params[:product][:category_id])
+    end
   end
 
   def index
