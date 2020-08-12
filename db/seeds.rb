@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Category.create(:name => 'Blush')
+Category.create(:name => 'Lips')
+Category.create(:name => 'Eye Shadow')
+Category.create(:name => 'Foundation')
+Category.create(:name => 'Concealer')
+Category.create(:name => 'Bronzer')
+Category.create(:name => 'Highlighter')
+Category.create(:name => 'Primer')
+Category.create(:name => 'Mascara')
+Category.create(:name => 'Lipgloss')
+Category.create(:name => 'Eye Liner')
+Category.create(:name => 'Eye Lashes')
