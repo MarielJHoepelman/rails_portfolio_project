@@ -18,7 +18,6 @@ class UserProductsController < ApplicationController
       redirect_to_user_products_index
     else
       flash[:notice] = "Please fill price field"
-
       redirect_back(fallback_location: root_path)
     end
   end
