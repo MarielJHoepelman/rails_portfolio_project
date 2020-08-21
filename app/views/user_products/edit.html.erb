@@ -5,5 +5,5 @@
 </div>
 
 <div class="back_button">
-  <%= link_to "Back", user_path(current_user), class: "btn btn-light" %>
+  <%= link_to "Back", category_user_products_path(@user_product.product.category), class: "btn btn-light" %>
 </div>
