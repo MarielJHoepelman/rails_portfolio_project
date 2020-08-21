@@ -28,11 +28,28 @@ With [Makeupnizer](https://github.com/MarielJHoepelman/rails_portfolio_project) 
   ```
     bundle exec rails db:migrate
   ```
-5. Start the local server and go to https address (e.g http://localhost:3000/)
+5. Run the seeds file.
+```
+  bundle exec rake db:seed
+```
+
+6. Start the local server and go to https address (e.g http://localhost:3000/)
 
   ```
     bundle exec rails s
   ```
+
+## Omniauth
+
+In order to log in/signup using Omniauth:
+
+  * Request a client id/client secret at [Google Developers](https://developers.google.com/identity/one-tap/web/guides/get-google-api-clientid).
+  * Create an .env file at the root level and add the following:
+
+ ```
+ CLIENT_ID=<your client id here>
+ CLIENT_SECRET=<your client secret here>
+ ```
 
 ## Contributing
 
@@ -48,5 +65,6 @@ Everyone interacting in the [Makeupnizer](https://github.com/MarielJHoepelman/ra
 
 ## Credits
 
-The logo for this project was created by [Mariangel Fermin](https://www.instagram.com/noiir_rrr/).  
+The logo for this project was created by [Mariangel Fermin](https://www.instagram.com/noiir_rrr/).
+
 The letter used for the creation of the logo is [Victoria](https://www.dafont.com/victoria-4.font).
