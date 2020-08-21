@@ -5,7 +5,7 @@
 
 <div class="d-flex justify-content-center flex-wrap">
   <% @categories.each do |category| %>
-  <div class="categories_buttons"><%= link_to category.name, user_category_user_products_path(@user, category), class: "btn btn-light" %></div>
+  <div class="categories_buttons"><%= link_to category.name, category_user_products_path(category), class: "btn btn-light" %></div>
   <% end %>
 </div>
 
