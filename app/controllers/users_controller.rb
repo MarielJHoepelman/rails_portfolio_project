@@ -9,9 +9,9 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     if @user.valid?
       session[:user_id] = @user.id
-      redirect_to user_path(@user)
+      redirect_to home_path
     else
-      flash.now[:notice] = "Please fill all fields"
+      flash.now[:notice] = @user.errors.full_messages.join(", ")
       render :new
     end
   end
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   def show
     if logged_in?
       @categories = Category.all
-      @user = User.find(params[:id])
+      @user = User.find(current_user.id)
     else
       redirect_to login_path
     end
