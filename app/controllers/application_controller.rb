@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
 
-
   helper_method :logged_in?
   helper_method :current_user
 
@@ -14,11 +13,7 @@ class ApplicationController < ActionController::Base
 
   def redirect_if_logged_in
     if logged_in?
-      redirect_to user_path(current_user)
+      redirect_to home_path
     end
-  end
-
-  def current_user_is_params_user?
-    current_user.id != params[:id].to_i
   end
 end
