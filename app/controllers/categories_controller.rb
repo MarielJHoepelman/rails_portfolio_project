@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.create(category_params)
     if @category.valid?
-      redirect_to user_path(current_user)
+      redirect_to home_path
     else
       flash[:notice] = "Please enter a valid category."
       redirect_to new_category_path
