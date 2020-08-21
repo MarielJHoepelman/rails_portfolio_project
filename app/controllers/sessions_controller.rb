@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
 
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
-      redirect_to user_path(@user)
+      redirect_to home_path
     else
       flash[:notice] = "Invalid email/password combination"
       redirect_to login_path
@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      redirect_to user_path(@user)
+      redirect_to home_path
     else
       redirect_to login_path
     end
