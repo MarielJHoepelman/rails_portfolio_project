@@ -3,8 +3,7 @@ class UserProductsController < ApplicationController
 
   def index
     @category = Category.find(params[:category_id])
-    @user = User.find(params[:user_id])
-    @user_products = UserProduct.product_from_category(params[:user_id], params[:category_id])
+    @user_products = UserProduct.product_from_category(current_user, params[:category_id])
   end
 
   def new
@@ -47,6 +46,6 @@ class UserProductsController < ApplicationController
   end
 
   def redirect_to_user_products_index
-    redirect_to user_category_user_products_path(current_user, @user_product.product.category)
+    redirect_to category_user_products_path(@user_product.product.category)
   end
 end
