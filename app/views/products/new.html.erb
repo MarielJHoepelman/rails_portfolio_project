@@ -3,7 +3,7 @@
 
     <%= form_for @product, url: products_path do |f| %>
       <%= f.hidden_field :category_id %>
-      <div class="form-group">
+      <div class="form-group <%= !!flash.now[:notice] ? "custom_error" : "" %> ">
         <%= f.label :name %>
         <%= f.text_field :name, class: "form-control" %>
       </div>
